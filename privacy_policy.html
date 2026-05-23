@@ -104,7 +104,7 @@
     </div>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: April 25, 2026</p>
+    <p class="updated">Last updated: May 23, 2026</p>
 
     <p>
       Hubble helps small groups find a meeting spot by calculating the
@@ -117,16 +117,34 @@
     <h2>What we collect</h2>
     <p>When you use Hubble we may collect:</p>
     <ul>
-      <li>An anonymous user identifier (a random UUID generated on sign-in). This is not linked to your name, email, phone, or any other identity.</li>
+      <li>An anonymous user identifier (a random UUID generated on first launch). Used only to associate you with sessions you join.</li>
       <li>A location you submit to a session — either your GPS coordinates (only if you tap "Use my location") or an address you type into the search field.</li>
+      <li>A display name you enter when joining a session. Shared with other participants in the same session so they can tell who's in. Deleted when the session ends.</li>
+      <li>Chat messages you send within a session. Visible only to participants of that session. Deleted when the session ends or after 24 hours, whichever comes first.</li>
       <li>Session metadata: the 6-character session code, search tags you choose (e.g. "Food", "Bowling"), and timestamps.</li>
     </ul>
+
+    <h2>If you sign in</h2>
+    <p>
+      Sign-in is optional. You can use Hubble anonymously by tapping
+      "Skip for now" on the welcome screen. If you do sign in with Apple
+      or Google we additionally store:
+    </p>
+    <ul>
+      <li>The display name from your Apple ID or Google account. Used to fill in your name automatically when joining a session — you can edit it before submitting.</li>
+      <li>The email address from your Apple ID or Google account. Used only for account recovery; never shown to other participants and never used for marketing.</li>
+      <li>Your profile photo URL (Google only — Apple does not share this). Used only on your own device for the profile screen avatar.</li>
+    </ul>
+    <p>
+      You can sign out from the profile screen at any time, or tap
+      "Delete account" to permanently remove your account and every
+      record tied to it.
+    </p>
 
     <h2>What we don't collect</h2>
     <p>Hubble does not collect or store:</p>
     <ul>
-      <li>Your name, email address, phone number, or photos.</li>
-      <li>Your device contacts, calendar, or microphone audio.</li>
+      <li>Your phone number, photos, contacts, calendar, or microphone audio.</li>
       <li>Advertising identifiers (IDFA / GAID).</li>
       <li>Background location. We only read your location when you actively tap "Use my location".</li>
       <li>Behavioural analytics. We do not track screen views, taps, or session duration for marketing purposes.</li>
@@ -143,9 +161,10 @@
     <h2>How long we keep it</h2>
     <p>Sessions are temporary by design:</p>
     <ul>
-      <li>Every session expires automatically 24 hours after it is created. At that point, the session and all participant locations are permanently deleted from our database.</li>
-      <li>When the host ends a session, every participant's submitted location is deleted immediately.</li>
-      <li>When you leave a session, your participant row (including your submitted location) is deleted immediately.</li>
+      <li>Every session expires automatically 24 hours after it is created. At that point, the session, all participant locations, all display names, and all chat messages are permanently deleted from our database.</li>
+      <li>When the host ends a session, every participant's submitted location and every chat message in that session is deleted immediately.</li>
+      <li>When you leave a session, your submitted location is cleared immediately. Your name and chat messages are kept until the session ends so other participants still see what was said.</li>
+      <li>If you signed in, your account (name + email) is kept until you tap "Delete account" on the profile screen.</li>
     </ul>
 
     <h2>Third-party services</h2>
@@ -155,7 +174,9 @@
       — only the data described.
     </p>
     <ul>
-      <li><strong>Supabase</strong> — stores session and participant rows (including submitted locations) and handles anonymous authentication. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
+      <li><strong>Supabase</strong> — stores session and participant rows (including submitted locations, display names, and chat messages) and handles authentication. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
+      <li><strong>Apple Sign in with Apple</strong> — optional. If you choose this, Apple returns your name and email to Supabase, where it's stored against your account. <a href="https://www.apple.com/legal/privacy" target="_blank" rel="noopener">apple.com/legal/privacy</a></li>
+      <li><strong>Google Sign-In</strong> — optional. If you choose this, Google returns your name, email, and profile photo URL to Supabase. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
       <li><strong>Google Maps Platform (Places API)</strong> — receives the group midpoint and your search tags to return matching venues, plus typed text when you use address autocomplete. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
       <li><strong>OSRM</strong> (router.project-osrm.org) — receives the midpoint and venue coordinates to compute estimated driving times.</li>
       <li><strong>OpenStreetMap Nominatim</strong> — receives GPS coordinates only when you tap "Use my location", in order to convert them to a human-readable address. <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">osmfoundation.org/wiki/Privacy_Policy</a></li>
