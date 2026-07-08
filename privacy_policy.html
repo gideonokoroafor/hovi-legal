@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Hubble — Privacy Policy</title>
-  <meta name="description" content="Privacy Policy for the Hubble app — what we collect, how we use it, and how long we keep it.">
+  <title>Hovi — Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for the Hovi app — what we collect, how we use it, and how long we keep it.">
   <!-- Tints iOS Safari URL bar + Android Chrome address bar to match the page -->
   <meta name="theme-color" content="#080C18">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -100,14 +100,14 @@
   <main>
     <div class="brand">
       <span class="brand-dot"></span>
-      hubble.
+      hovi.
     </div>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: May 23, 2026</p>
+    <p class="updated">Last updated: July 7, 2026</p>
 
     <p>
-      Hubble helps small groups find a meeting spot by calculating the
+      Hovi helps small groups find a meeting spot by calculating the
       midpoint between everyone's locations and showing nearby venues.
       We've built it to collect as little personal data as possible.
       This policy explains what we collect, how we use it, and how long
@@ -115,18 +115,19 @@
     </p>
 
     <h2>What we collect</h2>
-    <p>When you use Hubble we may collect:</p>
+    <p>When you use Hovi we may collect:</p>
     <ul>
       <li>An anonymous user identifier (a random UUID generated on first launch). Used only to associate you with sessions you join.</li>
       <li>A location you submit to a session — either your GPS coordinates (only if you tap "Use my location") or an address you type into the search field.</li>
       <li>A display name you enter when joining a session. Shared with other participants in the same session so they can tell who's in. Deleted when the session ends.</li>
       <li>Chat messages you send within a session. Visible only to participants of that session. Deleted when the session ends or after 24 hours, whichever comes first.</li>
       <li>Session metadata: the 6-character session code, search tags you choose (e.g. "Food", "Bowling"), and timestamps.</li>
+      <li>Crash reports. If the app crashes, technical details (device model, OS version, and a stack trace) are sent to Firebase Crashlytics so we can find and fix the bug. Crash reports are not linked to your name, email, or account.</li>
     </ul>
 
     <h2>If you sign in</h2>
     <p>
-      Sign-in is optional. You can use Hubble anonymously by tapping
+      Sign-in is optional. You can use Hovi anonymously by tapping
       "Skip for now" on the welcome screen. If you do sign in with Apple
       or Google we additionally store:
     </p>
@@ -134,6 +135,7 @@
       <li>The display name from your Apple ID or Google account. Used to fill in your name automatically when joining a session — you can edit it before submitting.</li>
       <li>The email address from your Apple ID or Google account. Used only for account recovery; never shown to other participants and never used for marketing.</li>
       <li>Your profile photo URL (Google only — Apple does not share this). Used only on your own device for the profile screen avatar.</li>
+      <li>Your meetup history: the winning venue (name, address, photo), the date, and the first names of the people you met with. Stored against your account so your history follows you across devices. You can remove single entries (swipe left on a card), clear the whole list ("Clear" on the home screen), or wipe it permanently with "Delete account".</li>
     </ul>
     <p>
       You can sign out from the profile screen at any time, or tap
@@ -142,7 +144,7 @@
     </p>
 
     <h2>What we don't collect</h2>
-    <p>Hubble does not collect or store:</p>
+    <p>Hovi does not collect or store:</p>
     <ul>
       <li>Your phone number, photos, contacts, calendar, or microphone audio.</li>
       <li>Advertising identifiers (IDFA / GAID).</li>
@@ -174,7 +176,8 @@
       — only the data described.
     </p>
     <ul>
-      <li><strong>Supabase</strong> — stores session and participant rows (including submitted locations, display names, and chat messages) and handles authentication. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
+      <li><strong>Supabase</strong> — stores session and participant rows (including submitted locations, display names, and chat messages), account profiles and meetup history for signed-in users, and handles authentication. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
+      <li><strong>Google Firebase Crashlytics</strong> — receives crash reports (device model, OS version, technical stack traces) so we can diagnose and fix bugs. We do not attach your name, email, or user ID to crash reports. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></li>
       <li><strong>Apple Sign in with Apple</strong> — optional. If you choose this, Apple returns your name and email to Supabase, where it's stored against your account. <a href="https://www.apple.com/legal/privacy" target="_blank" rel="noopener">apple.com/legal/privacy</a></li>
       <li><strong>Google Sign-In</strong> — optional. If you choose this, Google returns your name, email, and profile photo URL to Supabase. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
       <li><strong>Google Maps Platform (Places API)</strong> — receives the group midpoint and your search tags to return matching venues, plus typed text when you use address autocomplete. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
@@ -185,22 +188,29 @@
 
     <h2>Children</h2>
     <p>
-      Hubble is not intended for children under 13. We do not knowingly
+      Hovi is not intended for children under 13. We do not knowingly
       collect data from children under 13.
     </p>
 
     <h2>Your rights</h2>
     <p>
-      Because Hubble does not link any personal identity to your
-      anonymous account, the simplest way to remove your data is to
-      leave or end any active session — your submitted locations are
-      deleted immediately. Sessions in which you are no longer a
-      participant will also expire and be deleted within 24 hours.
+      If you use Hovi anonymously, no personal identity is linked to
+      your account — the simplest way to remove your data is to leave
+      or end any active session (your submitted locations are deleted
+      immediately), and sessions you are no longer part of expire and
+      are deleted within 24 hours. "Clear my data" on the profile
+      screen does all of this in one tap.
+    </p>
+    <p>
+      If you signed in, everything tied to your account — name, email,
+      avatar, and meetup history — can be permanently removed at any
+      time with "Delete account" on the profile screen. This works
+      immediately and cannot be undone.
     </p>
     <p>
       If you'd like us to delete data manually or have any questions,
       contact us at
-      <a href="mailto:support@hubbleapp.example">support@hubbleapp.example</a>.
+      <a href="mailto:okoroaforgid@gmail.com">okoroaforgid@gmail.com</a>.
     </p>
 
     <h2>Changes to this policy</h2>
@@ -211,7 +221,7 @@
     </p>
 
     <div class="contact">
-      Contact: <a href="mailto:support@hubbleapp.example">support@hubbleapp.example</a>
+      Contact: <a href="mailto:okoroaforgid@gmail.com">okoroaforgid@gmail.com</a>
     </div>
   </main>
 </body>
